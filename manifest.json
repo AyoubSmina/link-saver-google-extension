@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Link Saver",
+  "version": "1.0",
+  "description": "Save and access links easily.",
+  "permissions": ["storage", "activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
